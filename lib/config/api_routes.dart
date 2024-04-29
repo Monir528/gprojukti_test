@@ -56,5 +56,6 @@ class ApiRoutes {
   static String getProductListByCategory(String slug) => "/products/public/product-list?page_size=20&page=1&category__slug=$slug";
   static String getProductListBySubcategory(String slug) => "/products/public/product-list?page_size=20&page=1&subcategory__slug=$slug";
   static String getProductListByGroup(String slug) => "/products/public/product-list?page_size=6&page=1&group__slug=$slug";
+  static String getProductVariant(String slug) => "/products/public/product-variant/$slug";
   static const postWorkingRecord = "/working_record";
 }

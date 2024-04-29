@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:gprojukti_test/services/network/http_requests.dart';
 import '../../config/api_routes.dart';
 import '../../global_widgets/own_title_app_bar.dart';
+import '../product_page.dart';
 
 class ProductListScreen extends StatefulWidget {
 
@@ -49,7 +51,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   leading: Image.network("${productList[index]['images']}"),
                   title: Text("${productList[index]['name']}"),
                   onTap: () {
-
+                    Get.to(ProductDetailsPage(slug: "${productList[index]['slug']}",));
                   },
                 );
               },
